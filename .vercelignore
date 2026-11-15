@@ -1,0 +1,7 @@
+contracts/
+.data/
+.env*
+!.env.example
+.solidity-auditor/
+tests/
+*.log

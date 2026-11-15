@@ -1,0 +1,162 @@
+{
+  "startedAt": "2026-11-13T15:12:16.432Z",
+  "api": "https://mezoremit.vercel.app",
+  "chainId": 31611,
+  "manager": "0xe722e59e163a8193E9C7072bA9D660f5217A7e95",
+  "musd": "0x118917a40FAF1CD7a13dB0Ef56C86De7973Ac503",
+  "sender": "0xD271Ce4285FA6101257e9C695A9be6884746CC6e",
+  "recipient": "0x46Bb1F27Fa89616A2f6072FA3E7eCad50b89ADBb",
+  "ok": false,
+  "steps": [
+    {
+      "name": "rpc is Mezo Testnet",
+      "ok": true,
+      "detail": {
+        "chainId": 31611
+      }
+    },
+    {
+      "name": "sender holds enough MUSD and BTC",
+      "ok": true,
+      "detail": {
+        "musd": "60000000000000000000",
+        "need": "55000000000000000000",
+        "btc": "499999724770728"
+      }
+    },
+    {
+      "name": "API health",
+      "ok": true,
+      "detail": {
+        "ok": true,
+        "chainId": 31611,
+        "latestBlock": "16756874",
+        "indexer": {
+          "lastBlock": null,
+          "lagBlocks": null,
+          "updatedAt": null
+        },
+        "deployed": true,
+        "db": "postgres",
+        "relayer": {
+          "enabled": true,
+          "address": "0x3c420dad372f7bdd3dafaa9739885fb01e9ba5b8",
+          "balanceBtc": "0.0005"
+        }
+      }
+    },
+    {
+      "name": "SIWE sign-in (both wallets)",
+      "ok": true
+    },
+    {
+      "name": "recipient created",
+      "ok": true,
+      "detail": {
+        "id": "c44334b3-a80e-429f-85a9-afb73c7c8b9c"
+      }
+    },
+    {
+      "name": "indicative quote (or MUSD-only if rates are down)",
+      "ok": true,
+      "detail": {
+        "referenceRate": "18.620415",
+        "rateSource": "Rates By Exchange Rate API (https://www.exchangerate-api.com) via open.er-api.com"
+      }
+    },
+    {
+      "name": "claim transfer created",
+      "ok": true,
+      "detail": {
+        "id": "84a2d109-8569-4c3c-aae1-0cefd05a33a2"
+      }
+    },
+    {
+      "name": "approve MUSD (claim #1)",
+      "ok": true,
+      "txHash": "0xd49d5c4058b69375e671c87477d4ebde5ceb86ec9adf67ebb0e293ac1e8d7d78",
+      "explorer": "https://explorer.test.mezo.org/tx/0xd49d5c4058b69375e671c87477d4ebde5ceb86ec9adf67ebb0e293ac1e8d7d78"
+    },
+    {
+      "name": "createClaimable",
+      "ok": true,
+      "txHash": "0x69b00dac35e037bbcf70915f784c99f57a44bcfac5bea04a621628ba04363c90",
+      "explorer": "https://explorer.test.mezo.org/tx/0x69b00dac35e037bbcf70915f784c99f57a44bcfac5bea04a621628ba04363c90"
+    },
+    {
+      "name": "status awaiting_claim (verified from chain)",
+      "ok": true,
+      "detail": {
+        "chainTransferId": "1"
+      }
+    },
+    {
+      "name": "public claim info has no note / names",
+      "ok": true,
+      "detail": {
+        "status": "awaiting_claim",
+        "relayAvailable": true
+      }
+    },
+    {
+      "name": "view proof reveals the note",
+      "ok": true
+    },
+    {
+      "name": "claimTransfer (via relay)",
+      "ok": true,
+      "txHash": "0xa614424ed529235be488d799daba9af2de11a62cff2b48eca9c39b9cc22af20b",
+      "explorer": "https://explorer.test.mezo.org/tx/0xa614424ed529235be488d799daba9af2de11a62cff2b48eca9c39b9cc22af20b"
+    },
+    {
+      "name": "status claimed",
+      "ok": true,
+      "detail": {
+        "claimedBy": "0x46bb1f27fa89616a2f6072fa3e7ecad50b89adbb"
+      }
+    },
+    {
+      "name": "recipient balance delta == exactly 25 MUSD",
+      "ok": true,
+      "detail": {
+        "before": "0",
+        "after": "25000000000000000000",
+        "delta": "25000000000000000000"
+      }
+    },
+    {
+      "name": "duplicate claim reverts",
+      "ok": true,
+      "detail": {
+        "error": "The contract function \"claimTransfer\" reverted."
+      }
+    },
+    {
+      "name": "short-expiry claim funded",
+      "ok": true,
+      "txHash": "0xe01f99439b6f4b8e5c8e6259088d061b308418c04fa8739ea9bd102d803b0757",
+      "detail": {
+        "expiresAt": "2026-11-13T15:15:50.000Z"
+      },
+      "explorer": "https://explorer.test.mezo.org/tx/0xe01f99439b6f4b8e5c8e6259088d061b308418c04fa8739ea9bd102d803b0757"
+    },
+    {
+      "name": "refundExpiredTransfer → sender refunded exactly 25 MUSD",
+      "ok": true,
+      "txHash": "0xc3008abfb73a3928ae4d520bc61340fb1a559ce57a56d378f206cee8da458d6f",
+      "detail": {
+        "delta": "25000000000000000000"
+      },
+      "explorer": "https://explorer.test.mezo.org/tx/0xc3008abfb73a3928ae4d520bc61340fb1a559ce57a56d378f206cee8da458d6f"
+    },
+    {
+      "name": "status refunded (from the indexer)",
+      "ok": false,
+      "detail": {
+        "status": "expired"
+      }
+    }
+  ],
+  "error": "step failed: status refunded (from the indexer)",
+  "finishedAt": "2026-11-13T15:20:15.830Z"
+}

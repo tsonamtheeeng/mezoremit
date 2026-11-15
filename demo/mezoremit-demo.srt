@@ -1,0 +1,272 @@
+1
+00:00:00,350 --> 00:00:01,550
+This is MezoRemit.
+
+2
+00:00:01,812 --> 00:00:05,712
+It sends money across borders and settles in MUSD,
+
+3
+00:00:05,875 --> 00:00:07,938
+the Bitcoin-backed dollar on Mezo.
+
+4
+00:00:08,200 --> 00:00:11,225
+Sending money home is still slow and expensive,
+
+5
+00:00:11,388 --> 00:00:13,775
+and the fees are hard to see until it's too late.
+
+6
+00:00:14,427 --> 00:00:17,202
+MezoRemit shows every cost before you send.
+
+7
+00:00:17,464 --> 00:00:18,977
+You can pay straight to a wallet,
+
+8
+00:00:19,214 --> 00:00:21,132
+or send a claim link to someone who doesn't have
+
+9
+00:00:21,152 --> 00:00:22,027
+a wallet yet.
+
+10
+00:00:22,290 --> 00:00:23,927
+Recipients can be in Mexico,
+
+11
+00:00:24,014 --> 00:00:25,602
+the Philippines, India,
+
+12
+00:00:25,864 --> 00:00:26,914
+Europe and more.
+
+13
+00:00:27,177 --> 00:00:29,677
+Every currency is shown with its own symbol.
+
+14
+00:00:30,328 --> 00:00:32,840
+Let's send money live on Mezo Testnet.
+
+15
+00:00:33,116 --> 00:00:35,340
+The sender connects with Mezo Passport,
+
+16
+00:00:35,553 --> 00:00:37,516
+so Bitcoin wallets like Unisat,
+
+17
+00:00:37,741 --> 00:00:41,265
+OKX and Xverse work, as well as any Ethereum wallet.
+
+18
+00:00:41,540 --> 00:00:43,466
+Signing in is a free signature,
+
+19
+00:00:43,690 --> 00:00:44,753
+not a transaction.
+
+20
+00:00:46,627 --> 00:00:48,302
+First, where the money is going.
+
+21
+00:00:48,564 --> 00:00:49,902
+We'll send to the Philippines,
+
+22
+00:00:49,939 --> 00:00:51,302
+in Philippine pesos.
+
+23
+00:00:51,952 --> 00:00:53,527
+Twenty-five MUSD.
+
+24
+00:00:53,802 --> 00:00:55,364
+The wallet balance is right there,
+
+25
+00:00:55,577 --> 00:00:56,915
+so there are no surprises.
+
+26
+00:00:57,578 --> 00:01:00,102
+The sender doesn't know their cousin's wallet address.
+
+27
+00:01:00,378 --> 00:01:01,078
+That's fine.
+
+28
+00:01:01,340 --> 00:01:03,715
+MezoRemit makes a claim link instead.
+
+29
+00:01:04,378 --> 00:01:06,378
+The link expires in seven days.
+
+30
+00:01:06,641 --> 00:01:08,191
+If nobody claims it by then,
+
+31
+00:01:08,404 --> 00:01:10,066
+the money goes back to the sender.
+
+32
+00:01:10,729 --> 00:01:14,542
+Before anything moves, the review screen lists every line.
+
+33
+00:01:14,817 --> 00:01:17,330
+The service fee is zero on testnet.
+
+34
+00:01:17,604 --> 00:01:20,092
+The network fee is paid in BTC.
+
+35
+00:01:20,380 --> 00:01:22,080
+The peso rate is shown too,
+
+36
+00:01:22,192 --> 00:01:23,880
+clearly marked as an estimate,
+
+37
+00:01:23,992 --> 00:01:26,204
+because the recipient gets MUSD.
+
+38
+00:01:26,479 --> 00:01:28,167
+The sender adds a short message.
+
+39
+00:01:28,830 --> 00:01:31,848
+One signature and one transaction lock the twenty-five
+
+40
+00:01:31,868 --> 00:01:34,268
+MUSD in the contract on Mezo.
+
+41
+00:01:34,530 --> 00:01:36,130
+MezoRemit never holds it.
+
+42
+00:01:41,093 --> 00:01:41,956
+The link is ready.
+
+43
+00:01:42,230 --> 00:01:44,773
+The secret key lives only in the part of the link
+
+44
+00:01:44,793 --> 00:01:47,043
+that browsers never send to a server,
+
+45
+00:01:47,193 --> 00:01:49,280
+so even MezoRemit can't claim it.
+
+46
+00:01:49,556 --> 00:01:51,868
+The sender shares it in any private chat,
+
+47
+00:01:52,105 --> 00:01:53,368
+or as a QR code.
+
+48
+00:01:54,020 --> 00:01:55,946
+Now the recipient opens the link.
+
+49
+00:01:56,220 --> 00:01:58,058
+They see the amount, who sent it,
+
+50
+00:01:58,208 --> 00:01:59,083
+and the message.
+
+51
+00:01:59,747 --> 00:02:00,759
+They connect a wallet.
+
+52
+00:02:01,022 --> 00:02:03,784
+No account to create, and no BTC needed.
+
+53
+00:02:04,435 --> 00:02:05,423
+Claiming is free.
+
+54
+00:02:05,685 --> 00:02:08,435
+MezoRemit's relayer pays the network fee,
+
+55
+00:02:08,598 --> 00:02:11,723
+and the contract only pays the wallet named in the claim.
+
+56
+00:02:11,985 --> 00:02:13,360
+Nobody can redirect it.
+
+57
+00:02:14,855 --> 00:02:15,255
+Done.
+
+58
+00:02:15,518 --> 00:02:19,143
+Twenty-five MUSD landed in the recipient's own wallet,
+
+59
+00:02:19,306 --> 00:02:22,380
+with a link to the transaction on the Mezo explorer.
+
+60
+00:02:23,044 --> 00:02:24,419
+Back on the sender's side,
+
+61
+00:02:24,556 --> 00:02:26,269
+the transfer shows as claimed.
+
+62
+00:02:26,531 --> 00:02:28,824
+Each step was checked against Mezo before it was
+
+63
+00:02:28,844 --> 00:02:29,794
+marked as done.
+
+64
+00:02:30,445 --> 00:02:33,033
+No pooled funds, no admin keys,
+
+65
+00:02:33,095 --> 00:02:34,770
+and every fee shown up front.
+
+66
+00:02:35,045 --> 00:02:37,495
+The testnet contracts are listed in the footer.
+
+67
+00:02:37,770 --> 00:02:40,758
+That's MezoRemit: send money across borders,
+
+68
+00:02:40,833 --> 00:02:42,420
+settle in MUSD.
+

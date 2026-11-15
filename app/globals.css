@@ -1,0 +1,211 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  MezoRemit tokens (see docs/DESIGN.md).
+  Base: "stone" neutrals, a hair warm (hue 85, chroma <= 0.006), so the app reads like paper and ink, not a dashboard.
+  Accent: one cobalt (hue 262) for primary actions, focus, links and the active nav item. Nothing else is blue.
+  Status colours are semantic only and always paired with a word:
+    ok    = verified on Mezo / delivered     warn = expired, needs action
+    bad   = failed                           sim  = sandbox simulation (always with "Simulated")
+  Radius rule: controls (buttons, inputs, chips) 8px; panels and sheets 14px; nothing is fully round except avatars/dots.
+*/
+:root {
+  --radius: 0.5rem;
+
+  --background: oklch(0.985 0.003 85);
+  --surface: oklch(0.966 0.004 85);
+  --foreground: oklch(0.235 0.003 85);
+  --card: oklch(0.998 0.001 85);
+  --card-foreground: var(--foreground);
+  --popover: oklch(0.998 0.001 85);
+  --popover-foreground: var(--foreground);
+
+  --brand: oklch(0.49 0.165 262);
+  --brand-ink: oklch(0.44 0.15 262);
+  --brand-soft: oklch(0.955 0.022 262);
+  --brand-foreground: oklch(0.985 0.005 262);
+
+  --primary: var(--brand);
+  --primary-foreground: var(--brand-foreground);
+
+  --secondary: oklch(0.947 0.004 85);
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.947 0.004 85);
+  --muted-foreground: oklch(0.46 0.008 85);
+  --accent: oklch(0.94 0.005 85);
+  --accent-foreground: var(--foreground);
+  --destructive: oklch(0.53 0.19 27);
+
+  --ok: oklch(0.5 0.12 155);
+  --ok-soft: oklch(0.96 0.03 155);
+  --warn: oklch(0.58 0.14 65);
+  --warn-soft: oklch(0.965 0.04 80);
+  --bad: oklch(0.54 0.19 27);
+  --bad-soft: oklch(0.965 0.025 27);
+  --sim: oklch(0.55 0.13 55);
+  --sim-soft: oklch(0.965 0.035 75);
+  --idle: oklch(0.6 0.008 85);
+
+  --border: oklch(0.905 0.005 85);
+  --input: oklch(0.85 0.006 85);
+  --ring: oklch(0.49 0.165 262 / 0.5);
+
+  --shadow-panel: 0 1px 2px oklch(0.3 0.01 85 / 0.05), 0 10px 30px -14px oklch(0.3 0.01 85 / 0.16);
+}
+
+.dark {
+  --background: oklch(0.17 0.004 85);
+  --surface: oklch(0.2 0.005 85);
+  --foreground: oklch(0.95 0.004 85);
+  --card: oklch(0.205 0.005 85);
+  --card-foreground: var(--foreground);
+  --popover: oklch(0.225 0.006 85);
+  --popover-foreground: var(--foreground);
+
+  --brand: oklch(0.72 0.13 262);
+  --brand-ink: oklch(0.78 0.11 262);
+  --brand-soft: oklch(0.27 0.05 262);
+  --brand-foreground: oklch(0.17 0.03 262);
+
+  --primary: var(--brand);
+  --primary-foreground: var(--brand-foreground);
+
+  --secondary: oklch(0.25 0.005 85);
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.25 0.005 85);
+  --muted-foreground: oklch(0.72 0.008 85);
+  --accent: oklch(0.26 0.006 85);
+  --accent-foreground: var(--foreground);
+  --destructive: oklch(0.7 0.16 25);
+
+  --ok: oklch(0.76 0.13 155);
+  --ok-soft: oklch(0.27 0.04 155);
+  --warn: oklch(0.8 0.13 75);
+  --warn-soft: oklch(0.28 0.04 75);
+  --bad: oklch(0.71 0.16 25);
+  --bad-soft: oklch(0.28 0.05 25);
+  --sim: oklch(0.79 0.12 65);
+  --sim-soft: oklch(0.28 0.04 65);
+  --idle: oklch(0.62 0.008 85);
+
+  --border: oklch(0.3 0.006 85);
+  --input: oklch(0.36 0.006 85);
+  --ring: oklch(0.72 0.13 262 / 0.5);
+
+  --shadow-panel: 0 1px 2px oklch(0 0 0 / 0.3), 0 10px 30px -14px oklch(0 0 0 / 0.55);
+}
+
+@theme inline {
+  --font-sans: var(--ff-ui), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--ff-display), var(--ff-ui), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--ff-code), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-sim: var(--sim);
+  --color-sim-soft: var(--sim-soft);
+  --color-idle: var(--idle);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 3px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+
+  --shadow-panel: var(--shadow-panel);
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: color-mix(in oklch, var(--brand) 22%, transparent);
+  }
+  :focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+  }
+}
+
+/* money, counts and dates: tabular lining figures so columns line up and live values don't jitter */
+@utility num {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+/* the dashed "simulation" frame used on every sandbox surface */
+@utility sim-frame {
+  border: 1px dashed color-mix(in oklch, var(--sim) 55%, transparent);
+  background: var(--sim-soft);
+}
+
+/* z-index scale (documented, not ad hoc) */
+:root {
+  --z-sticky: 20;
+  --z-dropdown: 30;
+  --z-overlay: 40;
+  --z-modal: 50;
+  --z-toast: 60;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,53 @@
+# Render Blueprint — MezoRemit background worker. The web app runs on Vercel; this process indexes
+# RemittanceManager events, reconciles with chain state, sweeps expiries / stale tx hints, drives the SANDBOX
+# (simulated) payout webhooks, sends optional emails and writes a heartbeat. See docs/OPERATIONS.md.
+services:
+  - type: worker
+    name: mezoremit-worker
+    runtime: node
+    plan: starter
+    buildCommand: npm ci --include=dev
+    startCommand: npm run worker
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      # Shared Postgres — the same DATABASE_URL (+ DB_SCHEMA) as the Vercel web app.
+      - key: DATABASE_URL
+        sync: false
+      - key: DB_SCHEMA
+        value: mezoremit
+      # Chain + contracts (same values as the web app)
+      - key: NEXT_PUBLIC_MEZO_RPC_URL
+        value: https://rpc.test.mezo.org
+      - key: NEXT_PUBLIC_MUSD_ADDRESS
+        value: "0x118917a40FAF1CD7a13dB0Ef56C86De7973Ac503"
+      - key: NEXT_PUBLIC_MANAGER_ADDRESS
+        sync: false
+      - key: NEXT_PUBLIC_DEPLOY_BLOCK
+        sync: false
+      # Used for the sandbox webhook URL (<APP_URL>/api/webhooks/sandbox) and email links.
+      - key: NEXT_PUBLIC_APP_URL
+        sync: false
+      # Must match the web app (session-keyed IP hashing; recipient data is only decrypted on the web side).
+      - key: SESSION_SECRET
+        sync: false
+      - key: RECIPIENT_DATA_KEY
+        sync: false
+      # Signs the simulated sandbox payout webhooks; must equal the web app's value.
+      - key: PROVIDER_WEBHOOK_SECRET_SANDBOX
+        sync: false
+      # Optional email
+      - key: RESEND_API_KEY
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      # RELAYER_PRIVATE_KEY is deliberately NOT set here: only the web app relays claims.
+      - key: CONFIRMATIONS
+        value: "2"
+      - key: WORKER_INTERVAL_MS
+        value: "10000"
+      - key: RECONCILE_EVERY
+        value: "20"

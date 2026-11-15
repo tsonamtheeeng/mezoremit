@@ -1,0 +1,79 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Helvetica,46,&H00FFFFFF,&H00FFFFFF,&H00000000,&H9A111111,0,0,0,0,100,100,0,0,3,14,0,2,160,160,56,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.35,0:00:01.55,Default,,0,0,0,,This is MezoRemit.
+Dialogue: 0,0:00:01.81,0:00:05.71,Default,,0,0,0,,It sends money across borders and settles in MUSD,
+Dialogue: 0,0:00:05.88,0:00:07.94,Default,,0,0,0,,the Bitcoin-backed dollar on Mezo.
+Dialogue: 0,0:00:08.20,0:00:11.22,Default,,0,0,0,,Sending money home is still slow and expensive,
+Dialogue: 0,0:00:11.39,0:00:13.78,Default,,0,0,0,,and the fees are hard to see until it's too late.
+Dialogue: 0,0:00:14.43,0:00:17.20,Default,,0,0,0,,MezoRemit shows every cost before you send.
+Dialogue: 0,0:00:17.46,0:00:18.98,Default,,0,0,0,,You can pay straight to a wallet,
+Dialogue: 0,0:00:19.21,0:00:21.13,Default,,0,0,0,,or send a claim link to someone who doesn't have
+Dialogue: 0,0:00:21.15,0:00:22.03,Default,,0,0,0,,a wallet yet.
+Dialogue: 0,0:00:22.29,0:00:23.93,Default,,0,0,0,,Recipients can be in Mexico,
+Dialogue: 0,0:00:24.01,0:00:25.60,Default,,0,0,0,,the Philippines, India,
+Dialogue: 0,0:00:25.86,0:00:26.91,Default,,0,0,0,,Europe and more.
+Dialogue: 0,0:00:27.18,0:00:29.68,Default,,0,0,0,,Every currency is shown with its own symbol.
+Dialogue: 0,0:00:30.33,0:00:32.84,Default,,0,0,0,,Let's send money live on Mezo Testnet.
+Dialogue: 0,0:00:33.12,0:00:35.34,Default,,0,0,0,,The sender connects with Mezo Passport,
+Dialogue: 0,0:00:35.55,0:00:37.52,Default,,0,0,0,,so Bitcoin wallets like Unisat,
+Dialogue: 0,0:00:37.74,0:00:41.27,Default,,0,0,0,,OKX and Xverse work, as well as any Ethereum wallet.
+Dialogue: 0,0:00:41.54,0:00:43.47,Default,,0,0,0,,Signing in is a free signature,
+Dialogue: 0,0:00:43.69,0:00:44.75,Default,,0,0,0,,not a transaction.
+Dialogue: 0,0:00:46.63,0:00:48.30,Default,,0,0,0,,First, where the money is going.
+Dialogue: 0,0:00:48.56,0:00:49.90,Default,,0,0,0,,We'll send to the Philippines,
+Dialogue: 0,0:00:49.94,0:00:51.30,Default,,0,0,0,,in Philippine pesos.
+Dialogue: 0,0:00:51.95,0:00:53.53,Default,,0,0,0,,Twenty-five MUSD.
+Dialogue: 0,0:00:53.80,0:00:55.36,Default,,0,0,0,,The wallet balance is right there,
+Dialogue: 0,0:00:55.58,0:00:56.91,Default,,0,0,0,,so there are no surprises.
+Dialogue: 0,0:00:57.58,0:01:00.10,Default,,0,0,0,,The sender doesn't know their cousin's wallet address.
+Dialogue: 0,0:01:00.38,0:01:01.08,Default,,0,0,0,,That's fine.
+Dialogue: 0,0:01:01.34,0:01:03.72,Default,,0,0,0,,MezoRemit makes a claim link instead.
+Dialogue: 0,0:01:04.38,0:01:06.38,Default,,0,0,0,,The link expires in seven days.
+Dialogue: 0,0:01:06.64,0:01:08.19,Default,,0,0,0,,If nobody claims it by then,
+Dialogue: 0,0:01:08.40,0:01:10.07,Default,,0,0,0,,the money goes back to the sender.
+Dialogue: 0,0:01:10.73,0:01:14.54,Default,,0,0,0,,Before anything moves, the review screen lists every line.
+Dialogue: 0,0:01:14.82,0:01:17.33,Default,,0,0,0,,The service fee is zero on testnet.
+Dialogue: 0,0:01:17.60,0:01:20.09,Default,,0,0,0,,The network fee is paid in BTC.
+Dialogue: 0,0:01:20.38,0:01:22.08,Default,,0,0,0,,The peso rate is shown too,
+Dialogue: 0,0:01:22.19,0:01:23.88,Default,,0,0,0,,clearly marked as an estimate,
+Dialogue: 0,0:01:23.99,0:01:26.20,Default,,0,0,0,,because the recipient gets MUSD.
+Dialogue: 0,0:01:26.48,0:01:28.17,Default,,0,0,0,,The sender adds a short message.
+Dialogue: 0,0:01:28.83,0:01:31.85,Default,,0,0,0,,One signature and one transaction lock the twenty-five
+Dialogue: 0,0:01:31.87,0:01:34.27,Default,,0,0,0,,MUSD in the contract on Mezo.
+Dialogue: 0,0:01:34.53,0:01:36.13,Default,,0,0,0,,MezoRemit never holds it.
+Dialogue: 0,0:01:41.09,0:01:41.96,Default,,0,0,0,,The link is ready.
+Dialogue: 0,0:01:42.23,0:01:44.77,Default,,0,0,0,,The secret key lives only in the part of the link
+Dialogue: 0,0:01:44.79,0:01:47.04,Default,,0,0,0,,that browsers never send to a server,
+Dialogue: 0,0:01:47.19,0:01:49.28,Default,,0,0,0,,so even MezoRemit can't claim it.
+Dialogue: 0,0:01:49.56,0:01:51.87,Default,,0,0,0,,The sender shares it in any private chat,
+Dialogue: 0,0:01:52.11,0:01:53.37,Default,,0,0,0,,or as a QR code.
+Dialogue: 0,0:01:54.02,0:01:55.95,Default,,0,0,0,,Now the recipient opens the link.
+Dialogue: 0,0:01:56.22,0:01:58.06,Default,,0,0,0,,They see the amount, who sent it,
+Dialogue: 0,0:01:58.21,0:01:59.08,Default,,0,0,0,,and the message.
+Dialogue: 0,0:01:59.75,0:02:00.76,Default,,0,0,0,,They connect a wallet.
+Dialogue: 0,0:02:01.02,0:02:03.78,Default,,0,0,0,,No account to create, and no BTC needed.
+Dialogue: 0,0:02:04.44,0:02:05.42,Default,,0,0,0,,Claiming is free.
+Dialogue: 0,0:02:05.69,0:02:08.44,Default,,0,0,0,,MezoRemit's relayer pays the network fee,
+Dialogue: 0,0:02:08.60,0:02:11.72,Default,,0,0,0,,and the contract only pays the wallet named in the claim.
+Dialogue: 0,0:02:11.99,0:02:13.36,Default,,0,0,0,,Nobody can redirect it.
+Dialogue: 0,0:02:14.86,0:02:15.26,Default,,0,0,0,,Done.
+Dialogue: 0,0:02:15.52,0:02:19.14,Default,,0,0,0,,Twenty-five MUSD landed in the recipient's own wallet,
+Dialogue: 0,0:02:19.31,0:02:22.38,Default,,0,0,0,,with a link to the transaction on the Mezo explorer.
+Dialogue: 0,0:02:23.04,0:02:24.42,Default,,0,0,0,,Back on the sender's side,
+Dialogue: 0,0:02:24.56,0:02:26.27,Default,,0,0,0,,the transfer shows as claimed.
+Dialogue: 0,0:02:26.53,0:02:28.82,Default,,0,0,0,,Each step was checked against Mezo before it was
+Dialogue: 0,0:02:28.84,0:02:29.79,Default,,0,0,0,,marked as done.
+Dialogue: 0,0:02:30.45,0:02:33.03,Default,,0,0,0,,No pooled funds, no admin keys,
+Dialogue: 0,0:02:33.10,0:02:34.77,Default,,0,0,0,,and every fee shown up front.
+Dialogue: 0,0:02:35.05,0:02:37.50,Default,,0,0,0,,The testnet contracts are listed in the footer.
+Dialogue: 0,0:02:37.77,0:02:40.76,Default,,0,0,0,,That's MezoRemit: send money across borders,
+Dialogue: 0,0:02:40.83,0:02:42.42,Default,,0,0,0,,settle in MUSD.

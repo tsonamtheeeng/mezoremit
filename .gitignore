@@ -1,0 +1,29 @@
+node_modules/
+.next/
+out/
+.env
+.env*.local
+contracts/.env
+contracts/artifacts/
+contracts/cache/
+contracts/types/
+*.tsbuildinfo
+.DS_Store
+.vercel
+coverage/
+contracts/out/
+contracts/cache/
+contracts/broadcast/*/31337/
+.data/
+next-env.d.ts
+
+# local audit runs + finding ledger (pashov solidity-auditor)
+.solidity-auditor/
+.env*
+
+# demo recording: scripts + SCRIPT.md + subtitles are committed; raw captures and the mp4 are not
+demo/record/out/
+demo/*.mp4
+demo/screenshots/
+# submission screenshots stay local (not pushed)
+docs/submission/[0-9]-*.png
